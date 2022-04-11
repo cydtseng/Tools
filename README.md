@@ -1,6 +1,6 @@
 Tools
 =======
-A collection of code for exploration, practice and revision.
+A collection of code just for fun and exploration.
 -----------
 
 Learning Resources:
