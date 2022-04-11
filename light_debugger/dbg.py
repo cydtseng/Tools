@@ -47,4 +47,31 @@ class dbg():
         return h_process
 
     def attach(self,pid):
+        self.h_process = self.open_process(pid)
+        if kernel32.DebugActiveProcess(pid):
+            self.debugger_active = True
+            self.pid  = pid
+            self.run()
+        else:
+            print("[*] Unable to attach to the process.")
 
+    def run(self):
+        while self.debugger_active == True:
+            self.get_debug_event()
+
+    def get_debug_event(self):
+        debug_event = DEBUG_EVENT()
+        continue_status = DBG_CONTINUE
+
+        if kernel32.WaitForDebugEvent(byref(debug_event), INFINITE):
+            raw_input("Please press a key to continue")
+            self.debugger_active = False
+            kernel32.ContinueDebugEvent(debug_event.dwProcessId, debug_event.dwThreadId, continue_status)
+
+    def detach(self):
+        if kernel32.DebugActiveProcessStop(self.pid):
+            print("[*] Debugging Complete. Program terminated.")
+            return True
+        else:
+            print ("[*] Error terminating Debugger.")
+            return False
