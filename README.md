@@ -3,9 +3,10 @@ Tools
 A collection of code just for fun and exploration.
 -----------
 
-Learning Resources:
-1. Gray Hat Python by Justin Seitz
-2. Violent Python by TJ O'Connor
+Tool List:
+1. Light Debugger (Uncomplete)
+2. Zip File Cracker
+3. PDF Metadata Extractor
 
 Cheers,
 Cyd
