@@ -8,4 +8,5 @@ Tool List:
 2. Zip File Cracker
 3. PDF Metadata Extractor
 4. WAP Analysis
+5. Powershell File Management
 
