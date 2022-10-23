@@ -9,4 +9,5 @@ Tool List:
 3. PDF Metadata Extractor
 4. WAP Analysis
 5. Powershell File Management
+6. Banner Grab
 
