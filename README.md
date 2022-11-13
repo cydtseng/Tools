@@ -11,3 +11,5 @@ Tool List:
 5. Powershell File Management
 6. Banner Grab
 7. Keylogger
+8. Password Pwn Checker
+9. Secure Password Generator
